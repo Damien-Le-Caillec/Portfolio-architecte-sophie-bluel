@@ -189,6 +189,10 @@ footer nav ul {
 
 /* New CSS */
 
+body {
+	background-color: #FFFEF8;
+}
+
 a {
 	text-decoration: none;
 	color: black;
@@ -196,6 +200,28 @@ a {
 
 a:hover {
 	color: #B1663C;
+}
+
+
+
+/* Index page */
+button {
+    border: 1px solid #1D6154;
+	color: #1D6154;
+	cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 60px;
+    background-color: #FFFEF8;
+	font-family: 'Syne';
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    gap: 10px;
 }
 
 
