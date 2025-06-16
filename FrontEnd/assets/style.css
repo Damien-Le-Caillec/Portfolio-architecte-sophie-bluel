@@ -121,10 +121,7 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
-#portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
-}
+
 #gallery {
 	width: 100%;
 	display: grid;
@@ -202,9 +199,44 @@ a:hover {
 	color: #B1663C;
 }
 
+.edition {
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+
+}
+
+.edition p {
+	color: white;
+	font-size: 14px;
+}
+
+.edition i {
+	color: white;
+}
+
+i {
+	padding: 10px;
+}
+
 
 
 /* Index page */
+
+.header-portfolio {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+#portfolio h2 {
+	text-align: center;
+	
+}
+
 button {
     border: 1px solid #1D6154;
 	color: #1D6154;
@@ -215,6 +247,11 @@ button {
 	font-family: 'Syne';
 	font-size: 16px;
 	font-weight: 700;
+}
+
+button.active {
+	color: #FFFEF8;
+	background-color: #1D6154;
 }
 
 #filter {
@@ -258,3 +295,236 @@ margin: auto;
     text-align: center;
     text-decoration: underline;
 }
+
+/* Modale1 */
+
+.open-modal1 {
+	font-size: 16px;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.modal1 {
+	inset: 0;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 10px;
+}
+
+.modal1::backdrop {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.modal1-content {
+	width: 100%;
+	max-width: 600px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.close-modal1 {
+	align-self: flex-end;
+	cursor: pointer;
+	border: none;
+}
+
+.title-modal {
+	font-family: 'Work Sans';
+	font-weight: 400;
+	font-size: 28px;
+	color: #000000;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+#gallery-modal {
+	width: 70%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 10px;
+	border-bottom: rgba(0, 0, 0, 0.5) 1px solid;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	overflow: auto;
+}
+
+#gallery-modal figure {
+	position: relative;
+}
+
+#gallery-modal img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	position: relative;
+	border-radius: 2px;
+}
+
+#gallery-modal button {
+	
+	padding: 4px;
+	border-radius: 2px;
+	position: absolute;
+	right: 0;
+	color: #ffffff;
+	background-color: black;
+	border: none;
+}
+
+.open-modal2 {
+	background-color : #1D6154;
+	color: white;
+	padding: 10px 40px;
+}
+
+.modal2 {
+	inset: 0;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 10px;
+}
+
+.modal2-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.return-modal1 {
+	align-self: flex-end;
+	cursor: pointer;
+	border: none;
+}
+
+.close-modal2 {
+	align-self: flex-end;
+	cursor: pointer;
+	border: none;
+}
+
+.modal2-content {
+	width: 100%;
+	max-width: 600px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#form-add-photo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 420px;
+	padding: 20px;
+	
+}
+
+.modal2 label {
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background: white;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+
+select {
+    cursor: pointer;
+}
+
+.photo-upload {
+	display: flex;
+	justify-content: center;
+	background-color: #E8F1F6;
+	width: 420px;
+	height: auto;
+	cursor: pointer;
+	padding : 10px;
+}
+
+#photo-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+i.fa-solid.fa-image {
+	color: #b9c5cc;
+	padding: 0px;
+}
+
+#uploaded-photo {
+    width: 300px; 
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    
+}
+
+#uploaded-photo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+
+
+
+
+.upload-button {
+	margin: 10px auto;
+	padding: 10px 20px;
+	color: #306685;
+	background-color: #CBD6DC;
+	border: none;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.info {
+	font-size: 10px;
+	color: #444444;
+}
+
+#uploaded-photo {
+	max-width: 100%;
+	max-height: 100%;
+	display: none;
+	top: 0;
+	left: 0;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+
+#submit-add-photo {
+	background-color : #1D6154;
+	color: white;
+	padding: 10px 40px;
+}
+

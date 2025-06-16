@@ -9,19 +9,28 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
-	<script src="assets/js/script-indexV2.js"></script>
+	<script src="https://kit.fontawesome.com/26ebe1ebbf.js" crossorigin="anonymous"></script>
 </head>
+<script src="assets/js/script-index.js" defer></script>
 <body>
+	<div class="edit-mode">
+		<div class="edition">
+			<p><i class="fa-solid fa-pen-to-square"></i>Mode édition</p>
+		</div>
+	</div>
+
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
 			<li><a href="./index.html">projets</a></li>
-			<li>contact</li>
-			<li><a href="./login.html">login</a></li>
+			<li><a href="#contact">contact</a></li>
+			<li><a href="./login.html" class="normal-mode">login</a></li>
+			<li><a href="#" id="logout-link" class="edit-mode">logout</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
+    
 </header>
 <main>
 	<section id="introduction">
@@ -35,13 +44,57 @@
 			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
 		</article>
 	</section>
+
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div id="filter">
-			
+		<div class="header-portfolio">
+			<h2>Mes Projets</h2>
+			<a class="open-modal1 edit-mode"><i class="fa-solid fa-pen-to-square"></i>modifier</a>
 		</div>
+		
+        <dialog class="modal1">
+			<div class="modal1-content">
+			<button class="close-modal1"><i class="fa-solid fa-xmark"></i></button>
+			<h3 class="title-modal">Galerie photo</h3>
+			<div id="gallery-modal">
+			</div>
+			<button class="open-modal2">Ajouter une photo</button>
+			</div>
+		</dialog>
+
+		<dialog class="modal2">
+			<div class="modal2-content">
+				<div class="modal2-header">
+					<button class="return-modal1"><i class="fa-solid fa-arrow-left"></i></button>
+					<button class="close-modal2"><i class="fa-solid fa-xmark"></i></button>
+				</div>
+				<h3 class="title-modal">Ajout photo</h3>
+				<form id="form-add-photo" action="#" method="post">
+					<div class="photo-upload">
+						<input type="file" id="file-input" name="file" accept="image/png, image/jpeg">
+						<div id="photo-placeholder">
+							<i class="fa-solid fa-image fa-4x"></i>
+							<button class="upload-button" onclick="document.getElementById('file-input').click()">+ Ajouter photo</button>
+							<p class="info">jpg, png : 4mo max</p>
+						</div>
+						<div id="uploaded-photo"></div>
+					</div>
+					<label for="title">Titre</label>
+					<input type="text" name="title" id="title" required>
+					<label for="category">Catégorie</label>
+					<select name="category" id="category-select" required>
+						<option value="" disabled selected></option>
+					</select>
+				</form>
+				<button id="submit-add-photo" type="submit">Valider</button>
+			</div>
+		</dialog>
+		<div class="normal-mode">
+			<div id="filter">
+			</div>
+		</div>
+
 		<div id="gallery">
-			
+
 		</div>
 	</section>
 	<section id="contact">

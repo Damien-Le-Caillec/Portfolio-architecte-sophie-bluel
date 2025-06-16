@@ -1,18 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector("#login form");
   const errorMessage = document.createElement("p");
+  const showError = document.getElementById("error")
 
   errorMessage.style.color = "red";
-  loginForm.appendChild(errorMessage);
+  showError.appendChild(errorMessage);
 
   loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
   
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
+  
 
   fetch("http://localhost:5678/api/users/login", {
-    method: "Post",
+    method: "POST",
     headers: { "content-Type": "application/json" },
     body: JSON.stringify({ email, password }),
   })
