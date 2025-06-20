@@ -163,7 +163,7 @@ async function deleteWork(workId) {
 
  // Catégories du menu déroulant
 async function loadCategories() {
-    try {
+try {
       const res = await fetch("http://localhost:5678/api/categories");
       const categories = await res.json();
       const select = document.getElementById("category-select");
@@ -177,7 +177,7 @@ async function loadCategories() {
     } catch (error) {
       console.error("Erreur chargement catégories :", error);
     }
-}
+  }
 
 // Fonction principale
 document.addEventListener("DOMContentLoaded", () => {
@@ -350,14 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// fetch("http://localhost:5678/api/works")
-//     .then(response => response.json())
-//     .then(works => {
-//         modaleGallery(works);
-//     })
-//     .catch(error => {
-//         console.error("Erreur lors de la récupération des works :", error);
-//     });
+
 
 
    
