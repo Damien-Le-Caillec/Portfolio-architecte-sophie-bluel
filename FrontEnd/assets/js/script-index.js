@@ -337,9 +337,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       alert("Work ajouté avec succès !");
-      document.querySelector(".modal2").close(); // Ferme la modale
+      document.querySelector(".modal2").close();
 
-      location.reload(); // Recharge la page pour mettre à jour
+      location.reload();
 
     } catch (error) {
       console.error("Erreur :", error);
